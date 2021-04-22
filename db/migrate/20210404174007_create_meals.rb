@@ -5,8 +5,7 @@ class CreateMeals < ActiveRecord::Migration[6.0]
       t.string :image_url
       t.integer :calories
       t.string :ingridents
-      t.integer :category_id
-
+      t.bigint :category_id, null: false, foreign_key: true
       t.timestamps
     end
   end

@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_04_04_174007) do
     t.string "image_url"
     t.integer "calories"
     t.string "ingridents"
-    t.integer "category_id"
+    t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
