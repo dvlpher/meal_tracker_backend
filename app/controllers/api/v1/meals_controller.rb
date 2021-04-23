@@ -17,7 +17,7 @@ class Api::V1::MealsController < ApplicationController
 
 private
     def meal_params
-        params.require(:meal).permit(:name, :image_url, :calories, :ingridents, :category_id)
+        params.require(:meal).permit(:name, :image_url, :calories, :ingredients, :category_id)
     end
 
 end
