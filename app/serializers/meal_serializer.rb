@@ -1,4 +1,4 @@
 class MealSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :image_url, :calories, :ingredients, :category_id, :category
+  attributes :name, :ingredients, :calories, :image_url, :category_id, :category
 end

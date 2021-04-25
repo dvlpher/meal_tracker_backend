@@ -9,11 +9,11 @@ class Api::V1::MealsController < ApplicationController
     def create
         meal = Meal.new(meal_params)
         if meal.save
-            render json: meal, status: :accepted
+          render json: MealSerializer.new(meal), status: :accepted
         else
-            render json: {errors: meal.errors.full_messages}, status: :unprocessible_entity 
+          render json: {errors: meal.errors.full_messages}, status: :unprocessible_entity
         end
-    end
+      end
 
 private
     def meal_params
