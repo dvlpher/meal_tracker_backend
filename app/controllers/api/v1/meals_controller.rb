@@ -15,6 +15,22 @@ class Api::V1::MealsController < ApplicationController
         end
       end
 
+    #   def edit
+    #     meal = Meal.find(params[:id])
+       
+    
+    # end
+
+    # def patch
+
+    # end
+
+    def destroy
+      meal = Meal.find(params[:id])
+      meal.destroy
+      render json: {message: "#{meal.name} has been deleted."}
+    end
+
 private
     def meal_params
         params.require(:meal).permit(:name, :image_url, :calories, :ingredients, :category_id)
